@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Inter";
+    src: url("/Assets/Fonts/Inter/Inter-VariableFont_opsz.ttf");
+}
+
+@font-face {
+    font-family: "Knewave";
+    src: url("/Assets/Fonts/Knewave/Knewave-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Koulen";
+    src: url("/Assets/Fonts/Koulen/Koulen-Regular.ttf");
+}
