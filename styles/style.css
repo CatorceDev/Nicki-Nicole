@@ -73,7 +73,7 @@ header nav div{
 
 /*TODO STYLES HERO*/
 
-.hero{
+#hero{
     background-image: url("/Assets/hero.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -136,4 +136,10 @@ header nav div{
 
 }
 
-/*TODO STYLES HERO ENDING*/
+/*TODO Styles Hero Ending*/
+
+/*TODO STYLES ABOUT */
+
+#about{
+    
+}
