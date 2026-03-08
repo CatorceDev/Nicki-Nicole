@@ -307,7 +307,7 @@ header nav div{
     rotate: 180deg;
     padding: 10% 0 10% 10%;
     border-radius: 0 0 30px 0;
-    background-color: #000;
+    backdrop-filter: blur(100px);
 }
 
 .section-title h2{
@@ -342,7 +342,7 @@ header nav div{
     position: absolute;
     left: 0;
     width: 100%;
-    height: 20%;
+    height: 10%;
     bottom: 100%;
     background: linear-gradient(to top, #000, transparent);
     z-index: -1;
@@ -512,15 +512,130 @@ header nav div{
     height: 20px;
 }
 
+/*TODO DISCOGRAPHY STYLES ENDING*/
+
+/*TODO MAIN STYLES ENDING*/
+
+/*TODO FOOTER STYLES*/
+
 footer{
     background-color: #ddd;
     color: #000;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 }
 
+.follow{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.links{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.links ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    max-width: 500px;
+    align-items: center;
+}
+
+.links li{
+    justify-content: center;
+    display: flex;
+    list-style-type: none;
+
+}
+
+.links a{
+    transition: 0.2s ease scale;
+}
+
+.links a:hover{
+    scale: 1.1;
+}
+
+.links img{
+    width: 40px;
+}
 footer p{
     color: #000;
+    font-weight: 600;
 }
 
 footer a{
     color: #000;
+}
+
+.footer-nav{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-nav ul{
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-direction: column;
+}
+
+footer p{
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.footer-nav li{
+    list-style-type: none;
+    color: #000;
+    display: flex;
+    
+    width: 100%;
+}
+
+.footer-nav div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-nav a{
+    margin: 0 10px;
+    font-weight: 500;
+    transition: font-weight 0.2s ease;
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
+}
+
+.footer-nav a:hover{
+    font-weight: 700;
+}
+
+
+.footer-name{
+    font-family: var(--koulen);
+    font-size: 2.3rem;
+    letter-spacing: 5px;
+}
+
+
+.educational-information{
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 30px;
 }
