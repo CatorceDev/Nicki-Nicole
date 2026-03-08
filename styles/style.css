@@ -37,7 +37,9 @@ h2, h3, h4, h5, h6{
 }
 
 .header a{
+    font-size: clamp(0.8rem, 3vw, 1.4rem);
     height: 100%;
+    text-align: center;
 }
 
 .header img{
@@ -301,6 +303,8 @@ header nav div{
     background: linear-gradient(to top, #000, transparent, #000);
 }
 
+
+
 .section-title{
     font-size: clamp(2.5rem, 3vw, 3rem);
     writing-mode: vertical-lr;
@@ -308,6 +312,15 @@ header nav div{
     padding: 10% 0 10% 10%;
     border-radius: 0 0 30px 0;
     backdrop-filter: blur(100px);
+}
+
+@media screen and (orientation: landscape){
+    .section-title{
+        writing-mode: horizontal-tb;
+        rotate: 0deg;
+        border-radius: 30px 0 0 0;
+        padding: 5%;
+    }
 }
 
 .section-title h2{
@@ -326,10 +339,10 @@ header nav div{
 }
 
 .discography-container{
-    padding-top: 30vh;
     background-color: #000;
     z-index: 10;
-    margin-top: 20vh;
+    margin-top: 10vh;
+    padding-top: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -360,6 +373,24 @@ header nav div{
     max-width: 440px;
     gap: 10px;
     margin: 30px;
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+    animation-timeline: --image;
+    animation-name: show;
+    animation-range: entry 0;
+    animation-fill-mode: both;
+}
+
+@keyframes show {
+    0%{
+        opacity: 0.8;
+        scale: 0.6;
+    }
+
+    100%{
+        opacity: 1;
+        scale: 1;
+    }
 }
 
 
