@@ -214,7 +214,7 @@ header nav div{
 .about-element span{
     font-weight: 900;
     text-transform: uppercase;
-    font-size: 1.1rem;
+    font-size: clamp(1.1rem, 10vw, 2rem);
     
 }
 
@@ -342,7 +342,7 @@ header nav div{
     position: absolute;
     left: 0;
     width: 100%;
-    height: 50%;
+    height: 20%;
     bottom: 100%;
     background: linear-gradient(to top, #000, transparent);
     z-index: -1;
@@ -357,24 +357,46 @@ header nav div{
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
-    max-width: 500px;
+    max-width: 440px;
     gap: 10px;
-    box-shadow: 0 0 7px #fff;
+    margin: 30px;
 }
+
+
 
 .discography-container .element-naiki{
     background-color: #ddd;
+}
+.discography-container .element-parte-de-mi{
+    background-color: #990102;
+}
+.discography-container .element-alma{
+    background-color: #000;
+}
+.discography-container .element-recuerdos{
+    background-color: #262739;
 }
 
 .discography-container .element-naiki a, p, h3{
     color: #000;
 }
+.discography-container .element-parte-de-mi a, p, h3{
+    color: #fff;
+}
+.discography-container .element-alma a, p, h3{
+    color: #fff;
+}
+.discography-container .element-recuerdos a, p, h3{
+    color: #fff;
+}
 
 .discography-container .container-image img{
     width: 100%;
     border-radius: 5px;
-    box-shadow: 0 0 5px #0002;
+}
 
+.discography-container .element-naiki .container-image img{
+    box-shadow: 0 0 5px #0003;
 }
 
 .discography-container .container-content{
@@ -384,33 +406,37 @@ header nav div{
 }
 
 .discography-container .content-songs{
-    width: 100%;
+    width: fit-content;
     display: flex;
+    height: 240px;
 }
 
 .discography-container .content-songs ul{
     margin-left: 10px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
 }
 
 .discography-container .content-songs li{
-    list-style-type: decimal;
-    font-size: clamp(0.7rem, 3vw, 1.2rem);
+    list-style-type: none;
 }
 
-.discography-container .content-songs li::marker{
-    color: #000;
-}
 
 .discography-container .content-songs a{
     margin: 2px;
     display: inline-block;
-    font-size: clamp(0.7rem, 3vw, 1.2rem);
+    font-size: clamp(0.7rem, 3vw, 1rem);
 }
 
 .discography-container .content-element{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 10px;
+    justify-content: end;
+    align-items: center;
 }
 
 .discography-container .content-element .element-album{
@@ -420,12 +446,23 @@ header nav div{
 
 .element-album a{
     display: flex;
-    align-items: center;
     gap: 10px;
 }
 
-.element-album a span{
+.element-naiki .element-album a span{
     color: #000;
+}
+
+
+.element-naiki .element-name h3{
+    color: #000;
+}
+.element-naiki .element-name p{
+    color: #000;
+}
+
+.element-album a span{
+    color: #fff;
     font-weight: 700;
     display: inline-block;
     width: min-content;
@@ -451,3 +488,5 @@ header nav div{
     justify-content: center;
     align-items: center;
 }
+
+
