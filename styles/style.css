@@ -18,6 +18,9 @@ body{
     background-color: #000;
 }
 
+h2, h3, h4, h5, h6{
+    font-family: var(--knewave);
+}
 
 /*TODO styles header*/
 
@@ -81,7 +84,7 @@ header nav div{
     position: relative;
     display: flex;
     justify-content: end;
-    padding: 50px;
+    padding: 0 50px 200px 0;
 }
 
 .hero::before{
@@ -106,12 +109,17 @@ header nav div{
     width: max-content;
 }
 
+.hero-container h1{
+    font-size: clamp(4rem, 6vw, 6rem);
+}
+
 .hero-container a{
     display: flex;
     align-items: center;
     gap: 5px;
     justify-content: end;
     font-family: var(--knewave);
+    font-size: clamp(2rem, 2.5vw, 2.5rem);
 }
 
 .hero-container a svg{
@@ -141,5 +149,68 @@ header nav div{
 /*TODO STYLES ABOUT */
 
 #about{
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
+
+#about::after{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #000, transparent);
+    z-index: 10;
+}
+
+.about-container{
+    margin: 30px;
+    width: 80%;
+    max-width: 400px;
+    position: relative;
+    padding: 20px;
+    z-index: 20;
+}
+
+.about-container h2{
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px;
+}
+
+.about-element{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-img{
+    position: relative;
+}
+
+.about-img::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #000, transparent);
+}
+
+.about-element img{
+    height: 300px;
+    width: fit-content;
+}
+
+.about-element p{
+    font-size: 1.2rem;
+    text-align: center;
+}
+
