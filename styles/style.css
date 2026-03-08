@@ -110,7 +110,7 @@ header nav div{
 }
 
 .hero-container h1{
-    font-size: clamp(4rem, 6vw, 6rem);
+    font-size: clamp(3.4rem, 6vw, 6rem);
 }
 
 .hero-container a{
@@ -158,7 +158,7 @@ header nav div{
 #about::after{
     content: "";
     position: absolute;
-    bottom: 100%;
+    bottom: 99%;
     left: 0;
     width: 100%;
     height: 100%;
@@ -167,9 +167,9 @@ header nav div{
 }
 
 .about-container{
-    margin: 30px;
+    margin: 30vh 30px;
     width: 80%;
-    max-width: 400px;
+    max-width: 600px;
     position: relative;
     padding: 20px;
     z-index: 20;
@@ -178,7 +178,7 @@ header nav div{
 .about-container h2{
     text-transform: uppercase;
     text-align: center;
-    margin: 20px;
+    font-size: clamp(1.8rem, 4vw, 4rem);
 }
 
 .about-element{
@@ -187,7 +187,7 @@ header nav div{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
 }
 
 .about-img{
@@ -201,16 +201,31 @@ header nav div{
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, #000, transparent);
+    background: linear-gradient(to top, #000 20%, transparent 70%);
 }
 
 .about-element img{
-    height: 300px;
     width: fit-content;
+    height: 300px;
 }
 
 .about-element p{
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 2rem);
     text-align: center;
 }
 
+@media screen and (orientation: landscape){
+    .about-container{
+        max-width: 900px;
+    }
+    
+    .about-element{
+        flex-direction: row;
+        gap: 60px;
+        
+    }
+
+    .about-element p{
+        text-align: left;
+    }
+}
