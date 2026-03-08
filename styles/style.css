@@ -408,7 +408,9 @@ header nav div{
 .discography-container .content-songs{
     width: fit-content;
     display: flex;
-    height: 240px;
+    height: 235px;
+    z-index: 20;
+    position: relative;
 }
 
 .discography-container .content-songs ul{
@@ -417,6 +419,7 @@ header nav div{
     align-items: start;
     flex-direction: column;
     flex-wrap: wrap;
+    column-gap: 30px;
     height: 100%;
 }
 
@@ -429,6 +432,15 @@ header nav div{
     margin: 2px;
     display: inline-block;
     font-size: clamp(0.7rem, 3vw, 1rem);
+    text-decoration: underline;
+    transition: scale 0.2s ease;
+    position: relative;
+    z-index: 100000;
+}
+
+.discography-container .content-songs a:hover{
+    scale: 1.1;
+
 }
 
 .discography-container .content-element{
@@ -437,6 +449,7 @@ header nav div{
     gap: 10px;
     justify-content: end;
     align-items: center;
+    position: relative;
 }
 
 .discography-container .content-element .element-album{
@@ -489,4 +502,25 @@ header nav div{
     align-items: center;
 }
 
+.discography-container .element-parte-de-mi .element-name h3{
+    font-size: 1.2rem;
+    height: 20px;
+}
 
+.discography-container .element-recuerdos .element-name h3{
+    font-size: 1.5rem;
+    height: 20px;
+}
+
+footer{
+    background-color: #ddd;
+    color: #000;
+}
+
+footer p{
+    color: #000;
+}
+
+footer a{
+    color: #000;
+}
