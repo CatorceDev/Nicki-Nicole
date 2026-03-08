@@ -3,10 +3,10 @@
     --knewave: "Knewave";
     --koulen: "koulen";
     --contrast-color: #7fd5ed;
+    scroll-behavior: smooth;
 }
 
 *{
-    
     color: #fff;
     text-decoration: none;
     font-family: var(--inter);
@@ -16,6 +16,7 @@
 
 body{
     background-color: #000;
+    color: #fff;
 }
 
 h2, h3, h4, h5, h6{
@@ -153,7 +154,8 @@ header nav div{
     align-items: center;
     justify-content: center;
     position: relative;
-    flex-direction: column
+    flex-direction: column;
+    margin-bottom: 20vh;
 }
 
 #about::after{
@@ -206,13 +208,20 @@ header nav div{
 }
 
 .about-element img{
-    width: fit-content;
     height: 300px;
+}
+
+.about-element span{
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    
 }
 
 .about-element p{
     font-size: clamp(1rem, 2vw, 2rem);
     text-align: center;
+    color: #fff;
 }
 
 @media screen and (orientation: landscape){
@@ -240,10 +249,14 @@ header nav div{
     position: relative;
     height: 50vh;
     overflow-y: hidden;
-    scrollbar-width: none;
     gap: 30px;
     margin-bottom: 20px;
+    scrollbar-width: revert;
+    scrollbar-color: var(--contrast-color) transparent;
+    padding-bottom: 20px;
 }
+
+.about-gallery
 
 .gallery-element{
     height: 100%;
@@ -251,4 +264,190 @@ header nav div{
 
 .gallery-element img{
     height: 100%;
+}
+
+/*TODO DISCOGRAPHY STYLES*/
+
+#discography{
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    flex-direction: column;
+    width: 100%;
+}
+
+.discography-hero-container{
+    width: 100%;
+    height: 100vh;
+    background-image: url("/Assets/discografia.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+    position: sticky;
+    top: 0;
+    z-index: -10;
+}
+
+.discography-hero-container::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top, #000, transparent, #000);
+}
+
+.section-title{
+    font-size: clamp(2.5rem, 3vw, 3rem);
+    writing-mode: vertical-lr;
+    rotate: 180deg;
+    padding: 10% 0 10% 10%;
+    border-radius: 0 0 30px 0;
+    background-color: #000;
+}
+
+.section-title h2{
+    font-family: var(--koulen);
+}
+
+@media screen and (orientation: landscape){
+    #discography{
+        background-size: cover;
+    }
+    
+    .dicography-button{
+        display: block;
+    }
+
+}
+
+.discography-container{
+    padding-top: 30vh;
+    background-color: #000;
+    z-index: 10;
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+.discography-container::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    bottom: 100%;
+    background: linear-gradient(to top, #000, transparent);
+    z-index: -1;
+}
+
+.discography-container .container-element{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+    max-width: 500px;
+    gap: 10px;
+    box-shadow: 0 0 7px #fff;
+}
+
+.discography-container .element-naiki{
+    background-color: #ddd;
+}
+
+.discography-container .element-naiki a, p, h3{
+    color: #000;
+}
+
+.discography-container .container-image img{
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #0002;
+
+}
+
+.discography-container .container-content{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.discography-container .content-songs{
+    width: 100%;
+    display: flex;
+}
+
+.discography-container .content-songs ul{
+    margin-left: 10px;
+}
+
+.discography-container .content-songs li{
+    list-style-type: decimal;
+    font-size: clamp(0.7rem, 3vw, 1.2rem);
+}
+
+.discography-container .content-songs li::marker{
+    color: #000;
+}
+
+.discography-container .content-songs a{
+    margin: 2px;
+    display: inline-block;
+    font-size: clamp(0.7rem, 3vw, 1.2rem);
+}
+
+.discography-container .content-element{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.discography-container .content-element .element-album{
+    display: flex;
+    flex-direction: row;
+}
+
+.element-album a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.element-album a span{
+    color: #000;
+    font-weight: 700;
+    display: inline-block;
+    width: min-content;
+}
+
+.element-album img{
+    width: 40px;
+}
+
+.discography-container .element-name{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.discography-container .element-name h3{
+    font-family: var(--inter);
+    height: 40px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
