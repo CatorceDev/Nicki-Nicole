@@ -153,6 +153,7 @@ header nav div{
     align-items: center;
     justify-content: center;
     position: relative;
+    flex-direction: column
 }
 
 #about::after{
@@ -167,7 +168,7 @@ header nav div{
 }
 
 .about-container{
-    margin: 30vh 30px;
+    margin: 30vh 30px 100px 30px;
     width: 80%;
     max-width: 600px;
     position: relative;
@@ -228,4 +229,26 @@ header nav div{
     .about-element p{
         text-align: left;
     }
+}
+
+/*TODO ABOUT GALLERY*/
+
+.about-gallery{
+    display: flex;
+    overflow: scroll;
+    width: 100%;
+    position: relative;
+    height: 50vh;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.gallery-element{
+    height: 100%;
+}
+
+.gallery-element img{
+    height: 100%;
 }
